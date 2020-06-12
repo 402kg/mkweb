@@ -7,7 +7,7 @@ Create React and Vanilla apps with no build configuration.
 - yarn ^1.20
 
 ### Installation
-- `yarn add -G mkweb`
+- `yarn global add mkweb`
 
 ### Usage
 - `mkweb`
