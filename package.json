@@ -1,13 +1,13 @@
 {
-  "name": "wcli",
+  "name": "mkweb",
   "version": "1.0.0",
-  "description": "...",
-  "main": "./bin/wcli",
-  "repository": "git@github.com:iknpx/wcli.git",
+  "description": "Create React and Vanilla apps with no build configuration.",
+  "main": "./bin/mkweb",
+  "repository": "git@github.com:iknpx/mkweb.git",
   "author": "Iakov Salikov <isalikov@pm.me>",
   "license": "MIT",
   "scripts": {
-    "lint": "eslint ./bin/wcli"
+    "lint": "eslint ./bin/mkweb"
   },
   "husky": {
     "hooks": {
@@ -15,7 +15,7 @@
     }
   },
   "lint-staged": {
-    "bin/wcli": "yarn lint"
+    "bin/mkweb": "yarn lint"
   },
   "dependencies": {
     "cli-spinner": "^0.2.10",

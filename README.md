@@ -1,4 +1,4 @@
-# wcli
+# mkweb
 
 Create React and Vanilla apps with no build configuration.
 
@@ -7,7 +7,7 @@ Create React and Vanilla apps with no build configuration.
 - yarn ^1.20
 
 ### Installation
-- `yarn add -G wcli`
+- `yarn add -G mkweb`
 
 ### Usage
-- `wcli`
+- `mkweb`
