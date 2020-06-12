@@ -21,6 +21,7 @@ const inquirer = require('inquirer');
 const crypto = require('crypto');
 const { exec } = require('child_process');
 const { Spinner } = require('cli-spinner');
+const colors = require('colors');
 
 (async () => {
     const { name } = await inquirer.prompt([
@@ -95,7 +96,6 @@ const { Spinner } = require('cli-spinner');
 
     exec(execString, () => {
         spinner.stop(true);
-
-        process.stdout.write(`Done!\n\ncd ./${name}\nyarn start\nOpen http://localhost:8000 in browser`);
+        process.stdout.write(`${colors.yellow.bold('Done!')}\n\n${colors.grey('$')} ${colors.blue(`cd ./${name}`)}\n${colors.grey('$')} ${colors.blue('yarn start')}\n\n${colors.cyan(`Open ${colors.bold.underline('http://localhost:8000')} in browser and enjoy your code!`)}\n...\n`);
     });
 })();

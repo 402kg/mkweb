@@ -1,6 +1,6 @@
 # mkweb
 
-Create React and Vanilla apps with no build configuration.
+Create React and Vanilla apps without build configuration
 
 ### Requirements
 - bash/zsh
