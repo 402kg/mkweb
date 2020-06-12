@@ -15,7 +15,7 @@
     }
   },
   "lint-staged": {
-    "src/**/*.js": "yarn lint"
+    "bin/wcli": "yarn lint"
   },
   "dependencies": {
     "cli-spinner": "^0.2.10",
