@@ -1,0 +1,45 @@
+---
+kind: pipeline
+name: ci
+
+steps:
+  - name: install
+    image: iknpx/archnode
+    commands:
+      - yarn --silent
+    when:
+      branch:
+        - master
+        - develop
+      event:
+        - push
+        - pull_request
+
+  - name: lint
+    image: iknpx/archnode
+    commands:
+      - yarn lint
+    when:
+      branch:
+        - master
+        - develop
+      event:
+        - push
+        - pull_request
+
+  - name: publish/npm-package
+    image: plugins/npm
+    settings:
+      username:
+        from_secret: npm_username
+      password:
+        from_secret: npm_password
+      email:
+        from_secret: npm_email
+      token:
+        from_secret: npm_token
+    when:
+      branch:
+        - master
+      event:
+        - push

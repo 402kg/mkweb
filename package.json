@@ -1,0 +1,17 @@
+{
+  "name": "wcli",
+  "version": "1.0.0",
+  "description": "...",
+  "main": "./bin/wcli",
+  "repository": "git@github.com:iknpx/wcli.git",
+  "author": "Iakov Salikov <isalikov@pm.me>",
+  "license": "MIT",
+  "dependencies": {
+    "inquirer": "^7.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.1.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.2"
+  }
+}
