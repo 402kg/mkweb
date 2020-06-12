@@ -37,6 +37,7 @@ const { Spinner } = require('cli-spinner');
             },
         },
     ]);
+
     const config = await inquirer.prompt([
         {
             type: 'list',

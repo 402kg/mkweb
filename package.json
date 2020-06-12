@@ -1,13 +1,16 @@
 {
   "name": "mkweb",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Create React and Vanilla apps with no build configuration.",
-  "main": "./bin/mkweb",
+  "main": "./bin/mkweb.js",
+  "bin": {
+    "mkweb": "./bin/mkweb.js"
+  },
   "repository": "git@github.com:iknpx/mkweb.git",
   "author": "Iakov Salikov <isalikov@pm.me>",
   "license": "MIT",
   "scripts": {
-    "lint": "eslint ./bin/mkweb"
+    "lint": "eslint ."
   },
   "husky": {
     "hooks": {
