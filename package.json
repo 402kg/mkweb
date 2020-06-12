@@ -10,7 +10,7 @@
   "author": "Iakov Salikov <isalikov@pm.me>",
   "license": "MIT",
   "scripts": {
-    "lint": "eslint .g"
+    "lint": "eslint ."
   },
   "husky": {
     "hooks": {
