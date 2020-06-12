@@ -19,6 +19,7 @@ const fs = require('fs');
 const inquirer = require('inquirer');
 const crypto = require('crypto');
 const { exec } = require('child_process');
+const { Spinner } = require('cli-spinner');
 
 (async () => {
     const { name } = await inquirer.prompt([
@@ -74,13 +75,23 @@ const { exec } = require('child_process');
         mv ./${mode}/* ./${name} && \
         rm -rf ./${mode} && \
         cd ./${name} && \
-        sed -i 's/{name}/${name}/g' ./package.json && \
-        sed -i 's/{name}/${name}/g' ./README.md
+        sed -i -e 's/{name}/${name}/g' ./package.json && \
+        sed -i -e 's/{name}/${name}/g' ./README.md && \
+        rm package.json-e && \
+        rm README.md-e && \
+        yarn && \
+        cd ..
     `;
 
     fs.mkdirSync(`./${name}`);
 
-    exec(execString, (err, stdout, stderr) => {
-        console.log(stdout);
+    const spinner = new Spinner('Installing dependencies... %s');
+    spinner.setSpinnerString('|/-\\');
+    spinner.start();
+
+    exec(execString, () => {
+        spinner.stop(true);
+
+        process.stdout.write(`Done!\n\ncd ./${name}\nyarn start\nOpen http://localhost:8000 in browser`);
     });
 })();

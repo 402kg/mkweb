@@ -6,12 +6,26 @@
   "repository": "git@github.com:iknpx/wcli.git",
   "author": "Iakov Salikov <isalikov@pm.me>",
   "license": "MIT",
+  "scripts": {
+    "lint": "eslint ./bin/wcli"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.js": "yarn lint"
+  },
   "dependencies": {
+    "cli-spinner": "^0.2.10",
     "inquirer": "^7.1.0"
   },
   "devDependencies": {
     "eslint": "^7.1.0",
     "eslint-config-airbnb-base": "^14.1.0",
-    "eslint-plugin-import": "^2.20.2"
+    "eslint-plugin-import": "^2.20.2",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.10"
   }
 }
