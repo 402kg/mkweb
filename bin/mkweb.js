@@ -76,7 +76,7 @@ const colors = require('colors');
     const execString = `
         curl https://cdn.dayler.io/mkweb/raw/${mode}.tar -o ./${mode}.tar && \
         tar -xvf ./${mode}.tar && \
-        mv ./${mode}/* ./${name} && \
+        mv ./${mode} ./${name} && \
         rm -rf ./${mode} && \
         rm ./${mode}.tar && \
         cd ./${name} && \
@@ -87,8 +87,6 @@ const colors = require('colors');
         yarn && \
         cd ..
     `;
-
-    fs.mkdirSync(`./${name}`);
 
     const spinner = new Spinner('Installing dependencies... %s');
     spinner.setSpinnerString('|/-\\');

@@ -1,6 +1,6 @@
 {
   "name": "mkweb",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Create React and Vanilla apps with no build configuration.",
   "main": "./bin/mkweb.js",
   "bin": {
