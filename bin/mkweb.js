@@ -73,9 +73,11 @@ const { Spinner } = require('cli-spinner');
     const mode = crypto.createHash('md5').update(base.toString()).digest('hex');
 
     const execString = `
-        tar -xvf ./raw/${mode}.tar && \
+        curl https://cdn.dayler.io/mkweb/raw/${mode}.tar -o ./${mode}.tar && \
+        tar -xvf ./${mode}.tar && \
         mv ./${mode}/* ./${name} && \
         rm -rf ./${mode} && \
+        rm ./${mode}.tar && \
         cd ./${name} && \
         sed -i -e 's/{name}/${name}/g' ./package.json && \
         sed -i -e 's/{name}/${name}/g' ./README.md && \
