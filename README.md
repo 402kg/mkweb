@@ -12,3 +12,5 @@ Create React and Vanilla apps without build configuration
 
 ### Usage
 - `mkweb`
+or
+- `npm mkweb` without installation
