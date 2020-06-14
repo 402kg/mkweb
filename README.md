@@ -7,6 +7,10 @@ Create React and Vanilla apps without build configuration
 - node.js ^10.1
 - yarn ^1.20
 
+### Usage without installation
+
+- `npx mkweb`
+
 ### Installation
 - `yarn global add mkweb`
 
