@@ -20,7 +20,7 @@ const fs = require('fs');
 const inquirer = require('inquirer');
 const crypto = require('crypto');
 const { exec } = require('child_process');
-const { Spinner } = require('cli-spinner');
+const ora = require('ora')
 const colors = require('colors');
 
 (async () => {
@@ -88,12 +88,11 @@ const colors = require('colors');
         cd ..
     `;
 
-    const spinner = new Spinner('Installing dependencies... %s');
-    spinner.setSpinnerString('|/-\\');
+    const spinner = ora('Installing JavaScript dependencies.');
     spinner.start();
 
     exec(execString, () => {
-        spinner.stop(true);
+        spinner.stop();
         process.stdout.write(`${colors.yellow.bold('Done!')}\n\n${colors.grey('$')} ${colors.blue(`cd ./${name}`)}\n${colors.grey('$')} ${colors.blue('yarn start')}\n\n${colors.cyan(`Open ${colors.bold.underline('http://localhost:8000')} in browser and enjoy your code!`)}\n...\n`);
     });
 })();
