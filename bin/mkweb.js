@@ -20,7 +20,7 @@ const fs = require('fs');
 const inquirer = require('inquirer');
 const crypto = require('crypto');
 const { exec } = require('child_process');
-const ora = require('ora')
+const ora = require('ora');
 const colors = require('colors');
 
 (async () => {
