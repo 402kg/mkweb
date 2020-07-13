@@ -1,6 +1,6 @@
 {
   "name": "mkweb",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Create React and Vanilla apps with no build configuration.",
   "main": "./bin/mkweb.js",
   "bin": {
@@ -21,9 +21,9 @@
     "bin/mkweb": "yarn lint"
   },
   "dependencies": {
-    "cli-spinner": "^0.2.10",
     "colors": "^1.4.0",
-    "inquirer": "^7.1.0"
+    "inquirer": "^7.1.0",
+    "ora": "^4.0.4"
   },
   "devDependencies": {
     "eslint": "^7.1.0",
